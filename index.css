@@ -1042,73 +1042,518 @@ section:target {
 }
 
 @media (max-width: 768px) {
+  /* PERFORMANCE OPTIMIZATIONS FOR MOBILE */
+  /* Disable heavy animations on mobile to prevent lag */
+  body {
+    animation: none;
+    background: linear-gradient(
+      135deg,
+      #a8d8f8 0%,
+      #6bb6e3 30%,
+      #4a90e2 60%,
+      #357abd 100%
+    );
+    background-size: cover;
+  }
+
+  #home::before {
+    animation: none;
+    opacity: 0.3;
+  }
+
   .wheel-container {
-    width: 350px;
-    height: 350px;
+    animation: none;
+  }
+
+  /* LAYOUT & SPACING IMPROVEMENTS */
+  section {
+    padding: 2rem 0.75rem;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .content-card {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+  }
+
+  /* SECTION TITLES - MOBILE OPTIMIZED */
+  .section-title {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem !important;
+    padding: 0.6rem 1rem !important;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    border-radius: 8px;
+  }
+
+  /* NAVIGATION WHEEL OPTIMIZATIONS */
+  .wheel-container {
+    width: 320px;
+    height: 320px;
   }
 
   .compass-center {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .compass-center::after {
+    font-size: 10px;
   }
 
   .spoke-handle {
+    font-size: 0.75rem;
+    width: 65px;
+    height: 14px;
+    line-height: 14px;
+    left: 75%;
+    padding: 0;
+  }
+
+  /* BACK BUTTON MOBILE OPTIMIZATION */
+  .back-to-wheel {
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.5rem 0.8rem;
     font-size: 0.8rem;
-    width: 70px;
-    left: 70%;
+    border-radius: 25px;
+  }
+
+  /* TIMELINE MOBILE IMPROVEMENTS */
+  .timeline {
+    max-width: 100%;
   }
 
   .timeline::before {
-    left: 30px;
+    left: 20px;
   }
 
   .timeline-item {
     width: 100%;
-    padding-left: 70px;
+    padding-left: 50px;
     padding-right: 0;
     float: none !important;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+    border-radius: 10px;
   }
 
   .timeline-item:nth-child(odd) .timeline-content::before,
   .timeline-item:nth-child(even) .timeline-content::before {
-    left: -36px;
+    left: -26px;
+    width: 16px;
+    height: 16px;
   }
 
-  section {
-    padding: 3rem 1rem;
+  /* ABOUT SECTION MOBILE */
+  #about .content-card {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
-  .content-card {
-    padding: 1.5rem;
+  .profile-img {
+    min-width: 200px;
+    height: 200px;
+    margin: 0 auto;
   }
 
+  .about-text {
+    min-width: 100%;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* SKILLS SECTION MOBILE */
+  .skills-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .skill-category {
+    min-width: 100%;
+    padding: 1rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-list li {
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+  }
+
+  /* PROJECTS GRID MOBILE */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    border-radius: 12px;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .project-link {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  /* INTERESTS GRID MOBILE */
+  .interests-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .interest-card {
+    padding: 1rem 0.8rem;
+    border-radius: 12px;
+  }
+
+  .interest-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+  }
+
+  .interest-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .interest-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .interest-card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  /* CONTACT SECTION MOBILE */
   .contact-container {
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    min-width: 100%;
+  }
+
+  .contact-info-card {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+  }
+
+  .contact-info-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-detail {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-detail svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-form {
+    min-width: 100%;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  .form-group textarea {
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+
+  /* CV DOWNLOAD BUTTON */
+  .cv-download {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
+  }
+
+  /* WATERMARK MOBILE */
+  .watermark {
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.7rem;
   }
 }
 
 @media (max-width: 480px) {
+  /* EXTRA SMALL MOBILE OPTIMIZATIONS */
+  section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .container {
+    padding: 0 0.25rem;
+  }
+
+  .content-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* SECTION TITLES - EXTRA SMALL MOBILE */
+  .section-title h2 {
+    font-size: 1.3rem !important;
+    padding: 0.5rem 0.8rem !important;
+    letter-spacing: 0.5px;
+  }
+
+  /* NAVIGATION WHEEL - EXTRA SMALL */
   .wheel-container {
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
+  }
+
+  .compass-center {
+    width: 75px;
+    height: 75px;
+  }
+
+  .compass-center::after {
+    font-size: 9px;
   }
 
   .spoke-handle {
+    font-size: 0.65rem;
+    width: 55px;
+    height: 12px;
+    line-height: 12px;
     left: 80%;
-    font-size: 0.7rem;
-    width: 60px;
   }
 
-  .section-title h2 {
-    font-size: 1.8rem;
-    padding: 0.8rem 1.5rem;
-  }
-
+  /* BACK BUTTON - EXTRA SMALL */
   .back-to-wheel {
-    top: 1rem;
-    left: 1rem;
-    padding: 0.6rem 1rem;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  /* TIMELINE - EXTRA SMALL */
+  .timeline-item {
+    padding-left: 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-content {
+    padding: 0.8rem;
+  }
+
+  .timeline-year {
+    font-size: 0.8rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* ABOUT SECTION - EXTRA SMALL */
+  .profile-img {
+    min-width: 150px;
+    height: 150px;
+  }
+
+  .about-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .about-text p {
     font-size: 0.9rem;
+  }
+
+  /* SKILLS - EXTRA SMALL */
+  .skill-category {
+    padding: 0.8rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1rem;
+  }
+
+  .skill-list li {
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+  }
+
+  /* PROJECTS - EXTRA SMALL */
+  .project-image {
+    height: 120px;
+  }
+
+  .project-content {
+    padding: 0.8rem;
+  }
+
+  .project-content h3 {
+    font-size: 1rem;
+  }
+
+  .project-content p {
+    font-size: 0.85rem;
+  }
+
+  .project-link {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  /* INTERESTS - EXTRA SMALL */
+  .interests-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .interest-card {
+    padding: 0.8rem;
+  }
+
+  .interest-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.8rem;
+  }
+
+  .interest-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .interest-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .interest-card p {
+    font-size: 0.75rem;
+  }
+
+  /* CONTACT - EXTRA SMALL */
+  .contact-info-card {
+    padding: 1rem;
+  }
+
+  .contact-info-card h3 {
+    font-size: 1rem;
+  }
+
+  .contact-detail {
+    font-size: 0.85rem;
+  }
+
+  .contact-form {
+    padding: 1.2rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+
+  .submit-btn {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  /* CV DOWNLOAD - EXTRA SMALL */
+  .cv-download {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  /* WATERMARK - EXTRA SMALL */
+  .watermark {
+    font-size: 0.6rem;
+    bottom: 5px;
+    right: 5px;
   }
 }
 
