@@ -627,16 +627,6 @@ section:target ~ #home {
   content: "⛪️";
 }
 
-@keyframes treasureFloat {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 .treasure-details {
   padding: 2rem;
   background: var(--parchment);
