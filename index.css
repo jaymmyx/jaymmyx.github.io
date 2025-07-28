@@ -350,7 +350,7 @@ section:target ~ #home {
 }
 
 .portrait-frame::before {
-  content: "👑";
+  content: "🥷🏽";
   font-size: 80px;
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.6));
 }
@@ -614,10 +614,18 @@ section:target ~ #home {
 }
 
 .treasure-lid::before {
-  content: "💎";
   font-size: 60px;
   filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
   animation: treasureFloat 4s ease-in-out infinite;
+}
+#makao::before {
+  content: "🏠";
+}
+#audiophile::before {
+  content: "🎧";
+}
+#acf::before {
+  content: "⛪️";
 }
 
 @keyframes treasureFloat {
@@ -1164,13 +1172,13 @@ section:target ~ #home {
     left: 18px;
   }
 
-  .timeline-treasure::before {
+  /* .timeline-treasure::before {
     left: -38px !important;
   }
 
   .timeline-treasure {
     transform: none !important;
-  }
+  } */
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1267,13 +1275,13 @@ section:target ~ #home {
   .compass-rose {
     grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 95%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 0;
   }
 
   .weapon-category {
-    padding: 1.5rem 0.8rem;
-    margin: 0 auto;
+    padding: 3rem 0.8rem 2rem 0.8rem;
+    margin: 0 1rem;
   }
 
   .weapon-title {
