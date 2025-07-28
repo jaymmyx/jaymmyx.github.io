@@ -78,26 +78,38 @@ My journey combines traditional software engineering with cutting-edge **neurode
 
 ## 🏆 Featured Projects
 
-### 💎 NeuroDashboard
+### 🏴‍☠️ Pirate Portfolio (This Site)
 
-A cognitive-friendly analytics dashboard designed to minimize cognitive load while maximizing information clarity. Features EEG data visualization optimized for quick comprehension and decision-making.
+An immersive, quest-based pirate-themed portfolio. Features a spinning portal wheel navigation, treasure chest project showcase, and mobile-first responsive design—all with pure HTML & CSS, no JavaScript. Designed as a hackathon entry for the Power Learn Project.
 
-**Technologies**: React, D3.js, Node.js, EEG APIs  
-**[⚡ Live Demo](#)** | **[📖 Case Study](#)**
+**Technologies**: HTML5, CSS3 (Grid, Flexbox, Animations)
+**[⚡ Live Demo](https://jaymmyx.github.io)**
 
-### ⚙️ FocusFlow App
+### 💎 Makao Archives
 
-Attention management tool that uses neuroscience principles to optimize work/rest cycles. Implements Pomodoro technique with cognitive load monitoring and adaptive interfaces that respond to user productivity patterns.
+ A real estate listing platform built with Next.js. Users can explore properties and make smarter housing decisions. 
+  
+**Technologies**: React, Node.js, MongoDB
+**[⚡ Live Demo](https://makao-mauve.vercel.app/)**
 
-**Technologies**: Vue.js, TensorFlow.js, PWA, Biometric APIs  
-**[⚡ Live Demo](#)** | **[📖 Case Study](#)**
+### 🎧 Audiophile Store
 
-### 🧠 Brainwave Reader
+A full-stack ecommerce webapp with Next.js and PostgreSQL.
+Implements SSR and real-time product data retrieval with
+pixel-perfect design.
 
-Experimental EEG interface that adapts website complexity based on real-time cognitive load measurements. Research project exploring adaptive interfaces for the future of human-computer interaction.
+**Technologies**: React, Redux, Styled Components
+**[⚡ Live Demo](https://audiophile-orpin.vercel.app/)**
 
-**Technologies**: Python, TensorFlow, WebGL, EEG Hardware  
-**[⚡ Live Demo](#)** | **[📄 Research Paper](#)**
+### 📰 ACF Church
+
+A visually engaging section of a church website, built with
+Next.js and Tailwind CSS. It highlights youth programs and
+spiritual events with responsive imagery and elegant layout
+design.
+
+**Technologies**: Next.js, MongoDB, Tailwind CSS
+**[⚡ Live Demo](https://acf-revamp.vercel.app/)**
 
 ## 🏗️ Portfolio Architecture
 
