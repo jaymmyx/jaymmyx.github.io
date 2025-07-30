@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Outer wheel rim -->
+  <defs>
+    <radialGradient id="wheelGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#b8860b"/>
+      <stop offset="60%" style="stop-color:#996f00"/>
+      <stop offset="80%" style="stop-color:#ffd700"/>
+      <stop offset="100%" style="stop-color:#996f00"/>
+    </radialGradient>
+    <radialGradient id="hubGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffd700"/>
+      <stop offset="100%" style="stop-color:#b8860b"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Main wheel circle -->
+  <circle cx="16" cy="16" r="14" fill="url(#wheelGradient)" stroke="#8b4513" stroke-width="2"/>
+  
+  <!-- Spokes -->
+  <g stroke="#8b4513" stroke-width="1.5" stroke-linecap="round">
+    <line x1="16" y1="16" x2="16" y2="6" transform="rotate(0 16 16)"/>
+    <line x1="16" y1="16" x2="16" y2="6" transform="rotate(60 16 16)"/>
+    <line x1="16" y1="16" x2="16" y2="6" transform="rotate(120 16 16)"/>
+    <line x1="16" y1="16" x2="16" y2="6" transform="rotate(180 16 16)"/>
+    <line x1="16" y1="16" x2="16" y2="6" transform="rotate(240 16 16)"/>
+    <line x1="16" y1="16" x2="16" y2="6" transform="rotate(300 16 16)"/>
+  </g>
+  
+  <!-- Center hub -->
+  <circle cx="16" cy="16" r="6" fill="url(#hubGradient)" stroke="#996f00" stroke-width="1"/>
+  
+  <!-- Center letter -->
+  <text x="16" y="20" text-anchor="middle" font-family="serif" font-size="10" font-weight="bold" fill="#8b4513">J</text>
+</svg>
