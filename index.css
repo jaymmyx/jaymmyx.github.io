@@ -884,10 +884,10 @@ section:target ~ #home {
 @keyframes portal-pulse {
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(1.05);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 }
 
@@ -905,7 +905,7 @@ section:target ~ #home {
     ),
     repeating-conic-gradient(
       from 0deg at center,
-      var(--gold) 0deg 5deg,
+      green 0deg 5deg,
       transparent 5deg 20deg
     );
   border-radius: 50%;
